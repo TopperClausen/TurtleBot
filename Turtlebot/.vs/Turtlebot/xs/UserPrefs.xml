@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{00185FAD-3C94-4260-89E5-73806DAA4E3F}|Default">
+  <MonoDevelop.Ide.ItemProperties.Application PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Application/Client.cs">
+    <Files>
+      <File FileName="Application/Handlers/MessageHandler.cs" Line="43" Column="36" />
+      <File FileName="Models/JoinableRole.cs" />
+      <File FileName="Models/UnitOfWork.cs" />
+      <File FileName="Application/Commands/GetRandomQuote.cs" />
+      <File FileName="DataAccess/DataAcess.cs" Line="6" Column="2" />
+      <File FileName="Application/Client.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Turtlebot" expanded="True" selected="True">
+            <Node name="Application" expanded="True">
+              <Node name="Commands" expanded="True" />
+              <Node name="Handlers" expanded="True" />
+            </Node>
+            <Node name="DataAccess" expanded="True" />
+            <Node name="Models" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Models FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.DataAccess FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
