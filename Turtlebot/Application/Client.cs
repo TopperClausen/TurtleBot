@@ -12,7 +12,7 @@ namespace Application
     public class Client
     {
         public DiscordClient client = new DiscordClient(new DiscordConfiguration {
-            Token = "NzczNjYxODY5MDM4MTA4Njgy.X6Meww.UUrFi8jlmQFY0dhNx83hD4RLZ_k",
+            Token = "NzczNjYxODY5MDM4MTA4Njgy.X6Meww.G9mFoXdu6qJDSbl4CJ0jhkHuo9A",
             TokenType = TokenType.Bot
         });
 
