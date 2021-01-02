@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Z2lzOqNW/fXYWxfyZyQPvW1lKXY5UhLWNfo6d9vUG9ci1tVB7qmkpsgrnqXkrEa3QDjD21UB8VWsEEVvvc5dg==",
+  "dgSpecHash": "ggMIjSgtbKbpIaYwt2TqdLJRIQZ3tpytOvJ72h5W7ycLOD38Ang43NnHy9GCLEtqR5pyjFsJmDNE75lfASOkVw==",
   "success": true,
-  "projectFilePath": "/Users/thomasclausen/Documents/GitHub/turtlebot/Turtlebot/Application/Application.csproj",
+  "projectFilePath": "/Users/thomasclausen/Documents/GitHub/TurtleBot/Turtlebot/Application/Application.csproj",
   "expectedPackageFiles": [
     "/Users/thomasclausen/.nuget/packages/dsharpplus/3.2.3/dsharpplus.3.2.3.nupkg.sha512",
     "/Users/thomasclausen/.nuget/packages/microsoft.csharp/4.3.0/microsoft.csharp.4.3.0.nupkg.sha512",

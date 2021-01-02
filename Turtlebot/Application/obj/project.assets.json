@@ -5834,14 +5834,14 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/thomasclausen/Documents/GitHub/turtlebot/Turtlebot/Application/Application.csproj",
+      "projectUniqueName": "/Users/thomasclausen/Documents/GitHub/TurtleBot/Turtlebot/Application/Application.csproj",
       "projectName": "Application",
-      "projectPath": "/Users/thomasclausen/Documents/GitHub/turtlebot/Turtlebot/Application/Application.csproj",
+      "projectPath": "/Users/thomasclausen/Documents/GitHub/TurtleBot/Turtlebot/Application/Application.csproj",
       "packagesPath": "/Users/thomasclausen/.nuget/packages/",
-      "outputPath": "/Users/thomasclausen/Documents/GitHub/turtlebot/Turtlebot/Application/obj/",
+      "outputPath": "/Users/thomasclausen/Documents/GitHub/TurtleBot/Turtlebot/Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/thomasclausen/.nuget/NuGet/NuGet.Config"
+        "/Users/thomasclausen/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

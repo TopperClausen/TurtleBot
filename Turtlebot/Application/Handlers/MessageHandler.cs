@@ -12,21 +12,30 @@ namespace Application.Handlers
     {
 
         List<ICommand> commands;
-        public EventHandler eventhandler;
 
-        public MessageHandler(EventHandler parrent)
+        private Client client;
+
+        public MessageHandler(Client parrent)
         {
-            this.eventhandler = parrent;
+            this.client = parrent;
             ListCommands();
+        }
+
+        private void ListCommands()
+        {
+            this.commands = new List<ICommand>();
+            commands.Add(new GetRandomQuote());
         }
 
         public async Task OnMessage(MessageCreateEventArgs e)
         {
+            Console.WriteLine("Received message " + e.Message.Content);
+
             if (e.Message.Author.IsBot || !e.Message.Content.StartsWith('!'))
                 return;
-
-            //compare current commands with the command issued
+            
             string commandFired = GetCommand(e.Message.Content);
+            Console.WriteLine(commandFired);
             foreach(ICommand item in commands)
             {
                 if(commandFired == item.GetEntry())
@@ -35,12 +44,6 @@ namespace Application.Handlers
                     break;
                 }
             }
-        }
-
-        private void ListCommands()
-        {
-            this.commands = new List<ICommand>();
-            commands.Add(new GetRandomQuote());
         }
 
         public List<string> GetArgs(string msg)
