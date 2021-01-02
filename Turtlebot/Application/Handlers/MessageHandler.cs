@@ -33,8 +33,9 @@ namespace Application.Handlers
 
             if (e.Message.Author.IsBot || !e.Message.Content.StartsWith('!'))
                 return;
-            
+
             string commandFired = GetCommand(e.Message.Content);
+            
             Console.WriteLine(commandFired);
             foreach(ICommand item in commands)
             {
@@ -59,7 +60,7 @@ namespace Application.Handlers
         public string GetCommand(string msg)
         {
             string[] splitMessage = msg.Split(' ');
-            return splitMessage[0].Remove('!');
+            return splitMessage[0].TrimStart('!');
         }
     }
 }
