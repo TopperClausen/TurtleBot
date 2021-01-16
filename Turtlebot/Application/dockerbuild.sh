@@ -1,6 +1,8 @@
 docker stop turtle
 docker rm turtle
-docke rmi turtlebot
+docker rmi turtlebot
+
+sudo docker ps
 
 docker build -t turtlebot .
 docker run -d --name turtle turtlebot
