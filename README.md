@@ -11,3 +11,8 @@ namespace Application {
     }
 }
 ```
+
+## and run with docker from same Folder
+```console
+../application$ sudo sh dockerbuild.sh
+```
