@@ -1,5 +1,5 @@
-docker stop turtlebot
-docker rm turtlebot
+docker stop turtle
+docker rm turtle
 docke rmi turtlebot
 
 docker build -t turtlebot .

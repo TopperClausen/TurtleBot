@@ -15,7 +15,7 @@ namespace Application
         public Handlers.MessageHandler msgHandler;
         public Handlers.EventHandler eventHandler;
         public DiscordClient client = new DiscordClient(new DiscordConfiguration {
-            Token = "NzczNjYxODY5MDM4MTA4Njgy.X6Meww.G9mFoXdu6qJDSbl4CJ0jhkHuo9A",
+            Token = Config.DiscordToken,
             TokenType = TokenType.Bot
         });
 
