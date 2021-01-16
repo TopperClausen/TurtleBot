@@ -13,6 +13,7 @@ namespace Application
     public class Client
     {
         public Handlers.MessageHandler msgHandler;
+        public Handlers.EventHandler eventHandler;
         public DiscordClient client = new DiscordClient(new DiscordConfiguration {
             Token = "NzczNjYxODY5MDM4MTA4Njgy.X6Meww.G9mFoXdu6qJDSbl4CJ0jhkHuo9A",
             TokenType = TokenType.Bot
@@ -33,6 +34,7 @@ namespace Application
             }
 
             this.client.MessageCreated += msgHandler.OnMessage;
+            this.client.GuildMemberAdded += eventHandler.OnGuildMemberJoin;
 
             await Task.Delay(-1);
         }

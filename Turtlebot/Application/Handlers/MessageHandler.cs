@@ -41,7 +41,7 @@ namespace Application.Handlers
             {
                 if(commandFired == item.GetEntry())
                 {
-                    await item.Execute(e);
+                    item.Execute(e);
                     break;
                 }
             }
