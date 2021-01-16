@@ -14,7 +14,7 @@
         "outputPath": "/Users/thomasclausen/Documents/GitHub/TurtleBot/Turtlebot/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/thomasclausen/.config/NuGet/NuGet.Config"
+          "/Users/thomasclausen/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

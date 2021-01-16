@@ -19,6 +19,11 @@ namespace Application
             TokenType = TokenType.Bot
         });
 
+        public Client() {
+            this.msgHandler = new Handlers.MessageHandler(this);
+            this.eventHandler = new Handlers.EventHandler();
+        }
+
         public async Task Init(string[] args)
         {
             try
