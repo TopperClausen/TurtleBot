@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Application.Commands;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
+using DSharpPlus;
 
 namespace Application.Handlers
 {
@@ -14,10 +15,12 @@ namespace Application.Handlers
         List<ICommand> commands;
 
         private Client client;
+        private Context ctx;
 
         public MessageHandler(Client parrent)
         {
             this.client = parrent;
+            this.ctx = new Context();
             ListCommands();
         }
 
@@ -25,6 +28,9 @@ namespace Application.Handlers
         {
             this.commands = new List<ICommand>();
             commands.Add(new GetRandomQuote());
+            commands.Add(new JoinRole(this));
+            commands.Add(new AddJoinableRole(this));
+            commands.Add(new LinkJoinableRole(this, this.ctx));
         }
 
         public async Task OnMessage(MessageCreateEventArgs e)
@@ -41,7 +47,14 @@ namespace Application.Handlers
             {
                 if(commandFired == item.GetEntry())
                 {
-                    item.Execute(e);
+                    try
+                    {
+                        await item.Execute(e);
+                    }catch (Exception err)
+                    {
+                        Console.WriteLine(err.Message);
+                    }
+                    
                     break;
                 }
             }
@@ -51,7 +64,7 @@ namespace Application.Handlers
         {
             string[] splitMessage = msg.Split(' ');
             List<string> args = new List<string>();
-            for (int i = 0; i < splitMessage.Length - 1; i++){
+            for (int i = 1; i < splitMessage.Length; i++){
                 args.Add(splitMessage[i]);
             }
             return args;
