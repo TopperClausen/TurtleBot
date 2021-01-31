@@ -1,19 +1,24 @@
 ﻿<Properties StartupConfiguration="{5ECE6077-8C3B-448F-9ED2-2D359A1EFD20}|Default">
   <MonoDevelop.Ide.ItemProperties.Application PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="dockerbuild.sh">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Commands/AddJoinableRole.cs">
     <Files>
-      <File FileName="Handlers/MessageHandler.cs" Line="36" Column="1" />
+      <File FileName="Handlers/MessageHandler.cs" Line="55" Column="1" />
       <File FileName="Dockerfile" Line="1" Column="1" />
       <File FileName="dockerbuild.sh" Line="3" Column="20" />
+      <File FileName="Commands/AddJoinableRole.cs" Line="34" Column="96" />
+      <File FileName="Models/JoinableRole.cs" Line="5" Column="35" />
+      <File FileName="Models/Admin.cs" Line="5" Column="35" />
+      <File FileName="Context.cs" Line="13" Column="94" />
+      <File FileName="Commands/JoinRole.cs" Line="19" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Application" expanded="True">
             <Node name="Application" expanded="True">
-              <Node name="Commands" expanded="True" />
+              <Node name="Commands" expanded="True" selected="True" />
               <Node name="Handlers" expanded="True" />
-              <Node name="dockerbuild.sh" selected="True" />
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
