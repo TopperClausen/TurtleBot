@@ -10,15 +10,16 @@ namespace Application.Commands {
     public class JoinRole : ICommand {
 
         private readonly MessageHandler handler;
+        private Context ctx;
 
-        public JoinRole(MessageHandler handler) {
+        public JoinRole(MessageHandler handler, Context ctx) {
             this.handler = handler;
+            this.ctx = ctx;
         }
         public async Task Execute(MessageCreateEventArgs e)
         {
             List<string> args = this.handler.GetArgs(e.Message.Content);
-            var ctx = new Context();
-            JoinableRole dbrole = ctx.JoinableRoles.Where(x => x.Alias == args[0]).FirstOrDefault();
+            JoinableRole dbrole = this.ctx.JoinableRoles.Where(x => x.Alias == args[0]).FirstOrDefault();
 
             var role = e.Guild.Roles.Where(x => x.Id.ToString() == dbrole.RoleID).FirstOrDefault();
             var member = (DiscordMember) e.Message.Author;

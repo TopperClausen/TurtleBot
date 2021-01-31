@@ -28,9 +28,10 @@ namespace Application.Handlers
         {
             this.commands = new List<ICommand>();
             commands.Add(new GetRandomQuote());
-            commands.Add(new JoinRole(this));
+            commands.Add(new JoinRole(this, this.ctx));
             commands.Add(new AddJoinableRole(this));
             commands.Add(new LinkJoinableRole(this, this.ctx));
+            commands.Add(new LeaveJoinableRole(this, this.ctx));
         }
 
         public async Task OnMessage(MessageCreateEventArgs e)
