@@ -10,7 +10,7 @@ namespace Application {
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer(@"Server=176.20.223.184;Database=TurtleBot;User Id=TurtleBot;Password=Turtle123");
+            builder.UseSqlServer(@"Server=176.20.223.225;Database=TurtleBot;User Id=TurtleBot;Password=Turtle123");
         }
     }
 }

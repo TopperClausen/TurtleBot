@@ -20,6 +20,12 @@ namespace Application.Commands {
         }
         public async Task Execute(MessageCreateEventArgs e)
         {
+            var admin = this.ctx.Admins.Where(x => x.DiscordID == e.Author.Id.ToString()).FirstOrDefault();
+            if (admin == null) {
+                e.Message.RespondAsync("You do not have the permissions to do this");
+                return;
+            }
+
             List<string> args = this.handler.GetArgs(e.Message.Content);
             var aliasCheck = this.ctx.JoinableRoles.Where(x => x.Alias == args[0]).FirstOrDefault();
             if(aliasCheck != null){
