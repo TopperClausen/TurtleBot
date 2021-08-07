@@ -7,6 +7,7 @@ using Application.Models;
 using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
+using System.Threading;
 
 namespace Application.Commands {
     public class LinkJoinableRole : ICommand {
@@ -20,6 +21,8 @@ namespace Application.Commands {
         }
         public async Task Execute(MessageCreateEventArgs e)
         {
+            e.Message.DeleteAsync();
+
             var admin = this.ctx.Admins.Where(x => x.DiscordID == e.Author.Id.ToString()).FirstOrDefault();
             if (admin == null) {
                 e.Message.RespondAsync("You do not have the permissions to do this");
@@ -46,8 +49,12 @@ namespace Application.Commands {
             ctx.JoinableRoles.Add(role);
             
             ctx.SaveChanges();
+            
+            var response = await e.Message.RespondAsync("Role linked");
 
-            await e.Message.RespondAsync("Role linked");
+            Thread.Sleep(5000);
+            e.Message.DeleteAsync();
+            await response.DeleteAsync();
             return;
         }
 

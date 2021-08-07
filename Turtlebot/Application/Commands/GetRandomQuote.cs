@@ -28,6 +28,8 @@ namespace Application.Commands
 
             var Embed = Builder.Build();
             await e.Message.RespondAsync(null, false, Embed);
+
+            await e.Message.DeleteAsync();
         }
 
         public string GetEntry()

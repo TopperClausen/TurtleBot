@@ -5,6 +5,7 @@ using Application.Handlers;
 using Application.Models;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
+using System.Threading;
 
 namespace Application.Commands {
     public class JoinRole : ICommand {
@@ -24,7 +25,12 @@ namespace Application.Commands {
             var role = e.Guild.Roles.Where(x => x.Id.ToString() == dbrole.RoleID).FirstOrDefault();
             var member = (DiscordMember) e.Message.Author;
             await member.GrantRoleAsync(role);
-            await e.Message.RespondAsync("Role granted");
+            var response = await e.Message.RespondAsync("Role granted");
+
+            await e.Message.DeleteAsync();
+
+            Thread.Sleep(5000);
+            await response.DeleteAsync();
         }
 
         public string GetEntry()
