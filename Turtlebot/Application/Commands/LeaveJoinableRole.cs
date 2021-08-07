@@ -5,6 +5,7 @@ using Application.Handlers;
 using Application.Models;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
+using System.Threading;
 
 namespace Application.Commands {
     public class LeaveJoinableRole : ICommand {
@@ -37,7 +38,11 @@ namespace Application.Commands {
 
             DiscordMember member = (DiscordMember) e.Message.Author;
             await member.RevokeRoleAsync(role, "COMMAND ISSUED");
-            await e.Message.RespondAsync("Role revoked");
+            var response = await e.Message.RespondAsync("Role revoked");
+
+            e.Message.DeleteAsync();
+            Thread.Sleep(5000);
+            await response.DeleteAsync();
             return;
         }
 
